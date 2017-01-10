@@ -11,14 +11,16 @@
 <style>
 .materialboxed.initialized.active{
 	max-height: none !important;
+	min-height: none!important;
+	width: auto!important
 }
 </style>
 <body>
 	<div class="row">
 	<% for(var i=0; i<images.length; i++) {%>
 		<div class="col s3">
-			<div class="card">
-	   			<div class="card-image"><img class="materialboxed" style="max-height:10em; min-height:10em; width:auto!important;" src = <%= images[i] + '.jpg' %> ></div>
+			<div class="card ">
+	   			<div class="card-image"><img class="responsive-img materialboxed" style="max-height:10em; min-height:10em; " src = <%= images[i] + '.jpg' %> ></div>
 	   		</div>
 	   	</div>
 	<% } %>
