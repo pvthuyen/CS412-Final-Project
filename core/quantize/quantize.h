@@ -18,7 +18,7 @@ void buildIndex(bool force = false) {
 
     cvflann::IndexParams *indexParams;
 
-    if (!force && file_exists)
+    if (!force && file_exists(indexFile))
         indexParams = new cvflann::SavedIndexParams(indexFile);
     else
         indexParams = new cvflann::KDTreeIndexParams(nKdTree);
