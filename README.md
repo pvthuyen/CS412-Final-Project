@@ -32,7 +32,12 @@
 	```
 
 ## Run the code
-	To run the code you need to download the codebook clusters here: https://drive.google.com/file/d/0BymJbdWH_Vu_ZXhnZ3l4SDlfZ2s/view and put it in data folder.
+	To run the code you need to download the codebook clusters here: 
+	https://drive.google.com/file/d/0BymJbdWH_Vu_ZXhnZ3l4SDlfZ2s/view 
+	and put it in data folder.
+
+	You also need to download the oxford building data set and extract
+	to core/data/images
 	```bash
 		# Run the C++ binary. This might takes one or two hours if this is the first time running.
 		./ImageRetrievalCpp
