@@ -3,7 +3,10 @@ oxbuild_images.tgz
 ImageRetrievalCpp
 utils/compute_ap/compute_ap
 local_configurations.h
-data/*
+data/*/*.txt
+data/*/*.jpg
+data/*/*.png
+data/*.hdf5
 .idea/*
 CMakeCache.txt
 CMakeFiles
@@ -12,3 +15,4 @@ cmake_install.cmake
 install_manifest.txt
 *.o
 compute_map
+*.mat

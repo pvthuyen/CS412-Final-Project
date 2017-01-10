@@ -11,6 +11,9 @@ var PORT = 6969;
 
 var upload = multer({ dest: '/tmp/'});
 
+// set the view engine to ejs
+app.set('view engine', 'ejs');
+
 app.get('/', function(req, res) {
   res.sendFile(__dirname + '/index.html');
 })
@@ -60,14 +63,15 @@ app.post('/file_upload', upload.single('file'), function(req, res) {
 // display result images
 app.get('/result', function(req, res) {
    var array = fs.readFileSync(__dirname + '/core/data/rankedlists/' + req.query.filename).toString().split("\n");
-   var imageLists = '<ul>';
-   for (var i=0; i<array.length; i++) {
-      imageLists += '<li><img src="' + array[i] + '.jpg' + '"></li>';
-   }
-   imageLists += '</ul>';
-   res.writeHead(200, {'Content-type':'text/html'});
-   res.end(imageLists);
+   // var imageLists = '<ul>';
+   // for (var i=0; i<array.length; i++) {
+   //    imageLists += '<li><img src="' + array[i] + '.jpg' + '"></li>';
+   // }
+   // imageLists += '</ul>';
 
+   // res.writeHead(200, {'Content-type':'text/html'});
+   // res.end(imageLists);
+   res.render('result', {images: array});
 }
 )  
 

@@ -1,0 +1,32 @@
+<html lang="en">
+<head>
+    <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+          
+</head>
+<style>
+.materialboxed.initialized.active{
+	max-height: none !important;
+}
+</style>
+<body>
+	<div class="row">
+	<% for(var i=0; i<images.length; i++) {%>
+		<div class="col s3">
+			<div class="card">
+	   			<div class="card-image"><img class="materialboxed" style="max-height:10em; min-height:10em; width:auto!important;" src = <%= images[i] + '.jpg' %> ></div>
+	   		</div>
+	   	</div>
+	<% } %>
+	</div>
+	<script>
+		$(document).ready(function(){
+    		$('.materialboxed').materialbox();
+  		});  
+	</script>
+</body>
+</html>
